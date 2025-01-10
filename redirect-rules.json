@@ -1,0 +1,41 @@
+[
+    {
+	"id": 1,
+	"condition": {
+	    "regexFilter": "^https?://(.*.)?youtube.com/watch\\?.*(v=[^?&]*).*(&t=[^?&]*)?",
+	    "resourceTypes": ["main_frame"]
+	},
+	"action": {
+	    "type": "redirect",
+	    "redirect": {
+		"regexSubstitution": "https://yewtu.be/watch?\\2\\3"
+	    }
+	}
+    },
+    {
+	"id": 2,
+	"condition": {
+	    "regexFilter": "^https?://(.*.)?youtube.com/?$",
+	    "resourceTypes": ["main_frame"]
+	},
+	"action": {
+	    "type": "redirect",
+	    "redirect": {
+		"regexSubstitution": "https://yewtu.be"
+	    }
+	}
+    },
+    {
+	"id": 3,
+	"condition": {
+	    "regexFilter": "^https?://(.*.)?x.com(/[^?&]*)?",
+	    "resourceTypes": ["main_frame"]
+	},
+	"action": {
+	    "type": "redirect",
+	    "redirect": {
+		"regexSubstitution": "https://nitter.poast.org\\2"
+	    }
+	}
+    }
+]

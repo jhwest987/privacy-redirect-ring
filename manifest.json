@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Redirect Youtube/X requests to invidious/nitter",
+  "description": "Redirects youtube.com/x.com requests to the appropriate invidious/nitter instance. Redirects always require host_permissions.",
+  "version": "0.1",
+  "permissions": ["declarativeNetRequestWithHostAccess"],
+    "host_permissions": [
+	"*://*.youtube.com/",
+	"*://*.x.com/"
+    ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset",
+        "enabled": true,
+        "path": "redirect-rules.json"
+      }
+    ]
+  }
+}
